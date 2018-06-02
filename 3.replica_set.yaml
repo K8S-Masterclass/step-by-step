@@ -1,0 +1,18 @@
+apiVersion: extensions/v1beta1
+kind: ReplicaSet
+metadata:
+  # Unique key of the ReplicaSet instance
+  name: replicaset-example
+spec:
+  # 3 Pods should exist at all times.
+  replicas: 3
+  template:
+    metadata:
+      labels:
+        name: nginx
+    spec:
+      containers:
+      - name: nginx
+        image: nginx
+        ports:
+        - containerPort: 80

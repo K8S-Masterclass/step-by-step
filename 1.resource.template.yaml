@@ -1,0 +1,10 @@
+apiVersion: apps/v1 # {{API VERSON}}
+kind: Pod # {{ TYPE }}
+metadata:
+  name: nginx-deployment # {{ NAME }}
+  labels:
+    app: nginx
+  annotations:
+    pod.beta.kubernetes.io/init: "data"
+spec:
+  {{ RESOURE SPECIFICATION }}

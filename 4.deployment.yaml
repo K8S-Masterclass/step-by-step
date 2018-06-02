@@ -1,0 +1,29 @@
+apiVersion: apps/v1beta1
+kind: Deployment
+metadata:
+  # Unique key of the Deployment instance
+  name: deployment-example
+spec:
+  replicas: 3
+  template:
+    metadata:
+      labels:
+        name: nginx
+    spec:
+      containers:
+      - name: nginx
+        image: nginx
+        ports:
+        - containerPort: 80
+##        volumeMounts:
+##          - name: config
+##            mountPath: /etc/nginx/conf.d
+##          - name: site
+##            mountPath: /var/www/public
+##      volumes:
+##      - name: config
+##        configMap:
+##          name: nginx-config
+##      - name: site
+##        configMap:
+##          name: nginx-files
