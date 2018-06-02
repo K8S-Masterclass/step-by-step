@@ -148,3 +148,38 @@ Uncomment TLS related
 ```
 kubectl apply -f 7.ingress.yaml
 ```
+
+## 17. Cleaunp
+
+```
+kubectl delete -f 7.ingress.yaml
+kubectl delete -f 5.service.yaml
+kubectl delete -f 4.deployment.yaml
+kubectl delete -f 6.configmaps.yaml
+```
+
+## 18. Helm install
+
+```
+helm install --namespace {} --name {}-mysql stable/mysql --set mysqlRootPassword=12345678 --set mysqlDatabase=owncloud
+```
+
+```
+kubectl get pvc
+kubectl get deployments -o yaml
+kubectl get secrets -o yaml
+```
+
+https://github.com/kubernetes/charts/tree/master/stable/mysql
+
+## 19. Pracice - Install OwnCloud
+
+https://hub.docker.com/_/owncloud/
+
+
+## 20. Resource Managment
+
+`helm upgrade {}-mysql stable/mysql --reuse-values --set resources.requests.cpu=100m --set resources.limits.cpu=500m`
+
+https://github.com/kubernetes/charts/blob/master/stable/mysql/values.yaml#L73
+https://kubernetes.io/docs/concepts/configuration/manage-compute-resources-container/#how-pods-with-resource-limits-are-run
