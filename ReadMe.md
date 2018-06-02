@@ -4,6 +4,9 @@
 * https://dashboard.portal.eu-central-1.ms.cloudposse.org/#!/overview - K8S Dashboard
 * https://grafana.portal.eu-central-1.ms.cloudposse.org/?orgId=1 - Grafana
 
+
+Clone https://github.com/K8S-Masterclass/step-by-step some where in home directory.
+
 ## 1. Install the Geodesic Modules
 
 ```

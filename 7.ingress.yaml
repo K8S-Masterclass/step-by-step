@@ -2,10 +2,10 @@ apiVersion: extensions/v1beta1
 kind: Ingress
 metadata:
   name: nginx-front
-#  annotations:
+  annotations:
 #    kubernetes.io/ingress.class: nginx
 ##    kubernetes.io/tls-acme: "true"
-#    ingress.annotations.external-dns.alpha.kubernetes.io/target: "ingress.eu-central-1.ms.cloudposse.org"
+#    external-dns.alpha.kubernetes.io/target: ingress.eu-central-1.ms.cloudposse.org
 spec:
   rules:
   - host: {}.eu-central-1.ms.cloudposse.org
