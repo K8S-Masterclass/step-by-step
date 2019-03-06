@@ -7,4 +7,4 @@ metadata:
   annotations:
     pod.beta.kubernetes.io/init: "data"
 spec:
-  {{ RESOURE SPECIFICATION }}
+  {{ RESOURCE SPECIFICATION }}
